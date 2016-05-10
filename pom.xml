@@ -21,11 +21,12 @@
     <parent>
         <groupId>org.wso2.carbon.identity</groupId>
         <artifactId>identity-extension-parent</artifactId>
-        <version>5.0.9-SNAPSHOT</version>
+        <version>5.1.0</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
     <artifactId>identity-carbon-auth-thrift</artifactId>
+   <version>5.0.9-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>WSO2 Carbon - Thrift Authenticator Module</name>
     <description>
@@ -132,6 +133,7 @@
 
     <properties>
         <libthrift.wso2.version>0.8.0.wso2v1</libthrift.wso2.version>
+        <libthrift.wso2.osgi.version.range>[0.8.0,0.9.0)</libthrift.wso2.osgi.version.range>
     </properties>
 
 </project>
