@@ -40,6 +40,16 @@
         <tag>HEAD</tag>
     </scm>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>libthrift.wso2</groupId>
+                <artifactId>libthrift</artifactId>
+                <version>${libthrift.wso2.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <repositories>
         <repository>
             <id>wso2-nexus</id>
@@ -118,6 +128,11 @@
         <module>components/org.wso2.carbon.identity.authenticator.thrift</module>
         <module>features/org.wso2.carbon.identity.thrift.authentication.feature</module>
     </modules>
+
+
+    <properties>
+        <libthrift.wso2.version>0.8.0.wso2v1</libthrift.wso2.version>
+    </properties>
 
 </project>
 
