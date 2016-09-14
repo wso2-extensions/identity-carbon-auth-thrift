@@ -24,7 +24,7 @@
         <version>1</version>
     </parent>
 
-    <groupId>org.wso2.carbon.identity</groupId>
+    <groupId>org.wso2.carbon.identity.carbon.auth.thrift</groupId>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>identity-carbon-auth-thrift</artifactId>
     <version>5.1.2-SNAPSHOT</version>
@@ -75,12 +75,12 @@
                 <version>${org.slf4j.verison}</version>
             </dependency>
             <dependency>
-                <groupId>org.wso2.carbon.identity</groupId>
+                <groupId>org.wso2.carbon.identity.framework</groupId>
                 <artifactId>org.wso2.carbon.identity.base</artifactId>
                 <version>${identity.framework.version}</version>
             </dependency>
             <dependency>
-                <groupId>org.wso2.carbon.identity</groupId>
+                <groupId>org.wso2.carbon.identity.carbon.auth.thrift</groupId>
                 <artifactId>org.wso2.carbon.identity.authenticator.thrift</artifactId>
                 <version>${project.version}</version>
             </dependency>
@@ -188,7 +188,7 @@
         <!--Change major version to minor version which is 0.9.0 due to 0.8.x and 0.9.x incompatibility-->
         <libthrift.wso2.osgi.version.range>[0.8.0.wso2v1,0.9.0)</libthrift.wso2.osgi.version.range>
 
-        <identity.framework.version>5.2.0</identity.framework.version>
+        <identity.framework.version>5.5.0-SNAPSHOT</identity.framework.version>
         <carbon.identity.package.import.version.range>[5.0.0, 6.0.0)</carbon.identity.package.import.version.range>
 
         <maven.scr.plugin.version>1.7.2</maven.scr.plugin.version>
