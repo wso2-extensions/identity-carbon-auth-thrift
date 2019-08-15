@@ -36,7 +36,7 @@ import java.sql.SQLException;
  */
 public class ThriftAuthenticationJDBCPersistenceManager {
 
-    private static Log log = LogFactory.getLog(ThriftAuthenticationJDBCPersistenceManager.class);
+    private static final Log log = LogFactory.getLog(ThriftAuthenticationJDBCPersistenceManager.class);
     private static ThriftAuthenticationJDBCPersistenceManager instance;
     private DataSource dataSource;
 

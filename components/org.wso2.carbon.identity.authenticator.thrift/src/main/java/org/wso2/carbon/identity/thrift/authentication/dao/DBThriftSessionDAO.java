@@ -39,7 +39,7 @@ public class DBThriftSessionDAO implements ThriftSessionDAO {
     public static final String ERROR_WHEN_EXECUTING_THE_SQL = "Error when executing the SQL :";
     public static final String THE_PERSISTENCE_STORE = "the persistence store.";
     public static final String THRIFT_SESSION_WITH_GIVEN_SESSION_ID_ALREADY_EXISTS = "Thrift session with given Session Id already exists.";
-    private static Log log = LogFactory.getLog(DBThriftSessionDAO.class);
+    private static final Log log = LogFactory.getLog(DBThriftSessionDAO.class);
 
     @Override
     public List<ThriftSession> getAllSessions() throws IdentityException {

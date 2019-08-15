@@ -58,7 +58,7 @@ import java.util.Hashtable;
 
 public class ThriftAuthenticationServiceComponent {
 
-    private static Log log = LogFactory.getLog(ThriftAuthenticationServiceComponent.class);
+    private static final Log log = LogFactory.getLog(ThriftAuthenticationServiceComponent.class);
 
 
     private static HttpService httpServiceInstance;

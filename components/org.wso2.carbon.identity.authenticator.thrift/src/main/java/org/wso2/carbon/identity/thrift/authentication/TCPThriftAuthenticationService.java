@@ -45,7 +45,7 @@ public class TCPThriftAuthenticationService {
     private final String keyStorePassword;
     private final int clientTimeout;
     private ThriftAuthenticatorService thriftAuthenticatorService;
-    private Log log = LogFactory.getLog(TCPThriftAuthenticationService.class);
+    private static final Log log = LogFactory.getLog(TCPThriftAuthenticationService.class);
     private TServer authenticationServer;
 
     public TCPThriftAuthenticationService(String hostName, int port, String keyStore, String keyStorePassword, int clientTimeout, ThriftAuthenticatorService thriftAuthenticatorService) {
