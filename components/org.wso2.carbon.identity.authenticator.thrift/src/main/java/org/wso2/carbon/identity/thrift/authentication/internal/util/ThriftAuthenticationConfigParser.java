@@ -51,7 +51,7 @@ public class ThriftAuthenticationConfigParser {
     private static SecretResolver secretResolver;
     // To enable attempted thread-safety using double-check locking
     private static Object lock = new Object();
-    private static Log log = LogFactory.getLog(ThriftAuthenticationConfigParser.class);
+    private static final Log log = LogFactory.getLog(ThriftAuthenticationConfigParser.class);
     private static String configFilePath;
 
     private OMElement rootElement;
