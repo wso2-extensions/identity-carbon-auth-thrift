@@ -36,14 +36,29 @@ public class ThriftAuthenticationDatabaseUtil {
     private static final Log log = LogFactory.getLog(ThriftAuthenticationDatabaseUtil.class);
 
     /**
+     * Returns an database connection.
+     *
+     * @return dbConnection
+     * @throws AuthenticationException
+     * @Deprecated The getDBConnection should handle both transaction and non-transaction connection. Earlier it
+     * handle only the transactionConnection. Therefore this method was deprecated and changed as handle both
+     * transaction and non-transaction connection. getDBConnection(boolean shouldApplyTransaction) method used as
+     * alternative of this method.
+     */
+    @Deprecated
+    public static Connection getDBConnection() throws AuthenticationException {
+        return getDBConnection(true);
+    }
+
+    /**
      * Get a database connection instance from the Thrift Identity Persistence Manager
      *
      * @return Database Connection
      * @throws AuthenticationException Error when getting an instance of the identity Persistence Manager
      */
-    public static Connection getDBConnection() throws AuthenticationException {
+    public static Connection getDBConnection(boolean shouldApplyTransaction) throws AuthenticationException {
         try {
-            return ThriftAuthenticationJDBCPersistenceManager.getInstance().getDBConnection();
+            return ThriftAuthenticationJDBCPersistenceManager.getInstance().getDBConnection(shouldApplyTransaction);
         } catch (AuthenticationException e) {
             String errMsg = "Error when getting a database connection from the Thrift Identity Persistence Manager";
             log.error(errMsg, e);
